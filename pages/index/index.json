@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/search/search",
+    "movie-show": "/components/movie/movie"
+  },
+  "navigationBarTitleText": "首页"
+}

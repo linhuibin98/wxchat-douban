@@ -1,0 +1,13 @@
+/* components/star/star.wxss */
+.star-container {
+  display: flex;
+}
+.ss-star {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.ss-text {
+  padding-left: 12rpx;
+  font-size: 22rpx;
+}

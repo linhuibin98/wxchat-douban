@@ -1,0 +1,58 @@
+/* components/movie/movie.wxss */
+
+.movie-container {
+  position: relative;
+  padding: 40rpx 30rpx 20rpx 30rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.movie-type {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+
+.movie-type::before {
+  position: absolute;
+  top: 44rpx;
+  left: 0;
+  content: '';
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #40bd55;
+}
+
+.type-ngt {
+  color: #40bd55;
+}
+
+.movie-group {
+  margin-top: 40rpx;
+  white-space: nowrap;
+}
+
+.movie-item {
+  display: inline-block;
+  width: 160rpx;
+  margin-right: 30rpx;
+}
+
+.movie-cv {
+  width: 100%;
+  height: 223rpx;
+}
+
+.movie-name {
+  display: block;
+  font-size: 24rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-ss {
+  display: flex;
+  margin-top: 16rpx;
+}

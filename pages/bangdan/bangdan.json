@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "lab": "/components/show-lab/show-lab"
+  },
+  "navigationBarTitleText": "榜单",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff"
+}

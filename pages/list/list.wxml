@@ -1,0 +1,13 @@
+<!--pages/list/list.wxml-->
+<view class="list-container">
+  <block wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.title'>
+    <view class="movie-item">
+      <image class="movie-cv" src="{{movie.images.small}}"></image>
+      <text class="movie-name">{{movie.title}}</text>
+      <view class="movie-ss">
+        <star rate='{{movie.rating.average}}'></star>
+        <text class="ss-text">{{movie.rating.average}}</text>
+      </view>
+    </view>
+  </block>
+</view>

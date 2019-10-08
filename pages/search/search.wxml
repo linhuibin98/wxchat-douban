@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<search-bar isSearch bind:changeipt='handleVal'></search-bar>
+<view class='list-container'>
+  <block wx:for='{{items}}' wx:key='{{item.title}}'>
+    <navigator class='list-item'>
+      <view class="list-item-left">
+        <image class="list-item-left-img" src="{{item.images.small}}"></image>
+      </view>
+      <view class="list-item-right">
+        <view class="list-item-right-title">{{item.title}}</view>
+        <star class='star' rate='{{item.rating.average}}'></star>
+        <view class="list-item-right-detail">{{item.year}} / 中国大陆 / {{item.genresStr}} / {{item.castsStr}}</view>
+      </view>
+    </navigator>
+  </block>
+</view>

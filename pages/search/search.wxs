@@ -1,0 +1,11 @@
+module.exports = function searchContent(val, data) {
+  var res = [];
+  for(var i = 0; i < data.length; i++) {
+    var reg = RegExp(val, 'g');
+    if (reg.test(data[i].title)) {
+      res.push(data[i]);
+    }
+  }
+  console.log(res);
+  return res;
+}

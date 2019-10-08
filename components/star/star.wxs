@@ -1,0 +1,19 @@
+var hanldeStar = function(rate) {
+  var starSrc = ['/images/rate_light.png', '/images/rate_half.png', '/images/rate_gray.png'];
+  var all = 5; 
+  var half = rate / 2;
+  var f = Math.floor(half);
+  var h = (half - f)>=0.5 ? 1 : 0;
+  var z = all - f - h;
+  var arr = [];
+  for(var i =0; i< f; i++) {
+    arr.push(starSrc[0]);
+  }
+  if (h) {arr.push(starSrc[1])};
+  for(var i = 0; i < z; i++) {
+    arr.push(starSrc[2]);
+  }
+  return arr;
+}
+
+module.exports = hanldeStar;

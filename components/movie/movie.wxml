@@ -1,0 +1,18 @@
+<!--components/movie/movie.wxml-->
+<view class="movie-container">
+  <view class="movie-type">
+    <text>{{title}}</text>
+    <navigator class="type-ngt" url="/pages/list/list?type={{type}}&title={{title}}">查看更多></navigator>
+  </view>
+  <scroll-view class="movie-group" scroll-x="true" enable-flex='true'>
+    <block wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.title'>
+      <view class="movie-item">
+        <image class="movie-cv" src="{{movie.images.small}}"></image>
+        <text class="movie-name">{{movie.title}}</text>
+        <view class="movie-ss">
+          <star rate='{{movie.rating.average}}'></star>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
