@@ -1,11 +1,12 @@
 // pages/list/list.js
+import request from '../../api/request.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    movies: []
   },
 
   /**
@@ -13,13 +14,15 @@ Page({
    */
   onLoad: function (options) {
     let {type, title} = options;
-    var movies = require(`../../data/${type}.js`);
-    this.setData({
-      movies: movies.subjects
-    });
     // 页面跳转后修改导航栏标题
-    wx.setNavigationBarTitle({ 
+    wx.setNavigationBarTitle({
       title
+    });
+    request[type](res => {
+      let movies = res.data.subject_collection_items;
+      this.setData({
+        movies
+      })
     });
   },
 

@@ -6,11 +6,11 @@
   </view>
   <scroll-view class="movie-group" scroll-x="true" enable-flex='true'>
     <block wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.title'>
-      <navigator class="movie-item" data-rr="{{movie.rating.average}}" url="/pages/detail/detail?id={{movie.id}}">
-        <image class="movie-cv" src="{{movie.images.small}}"></image>
+      <navigator class="movie-item" url="/pages/detail/detail?id={{movie.id}}&type={{movie.type}}">
+        <image class="movie-cv" src="{{movie.cover.url}}"></image>
         <text class="movie-name">{{movie.title}}</text>
         <view class="movie-ss">
-          <star rate='{{movie.rating.average}}'></star>
+          <star rate='{{movie.rating.value}}'></star>
         </view>
       </navigator>
     </block>

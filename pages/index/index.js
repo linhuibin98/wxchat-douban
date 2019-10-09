@@ -1,3 +1,4 @@
+import request from '../../api/request.js';
 Page({
 
   /**
@@ -11,7 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // wx.request({
+    //   url: 'https://m.douban.com/rexxar/api/v2/movie/27119724',
+    //   success(res) {
+    //     console.log(res)
+    //   }
+    // })
+
+    // request.movieShowing((res) => {
+    //   console.log(res)
+    // })
   },
 
   /**

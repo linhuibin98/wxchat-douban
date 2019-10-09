@@ -1,3 +1,4 @@
+import request from '../../api/request.js';
 // components/movie/movie.js
 Component({
   /**
@@ -10,7 +11,11 @@ Component({
     },
     type: {
       type: String,
-      value: 'last'
+      value: 'movieShowing'
+    },
+    count: {
+      type: Number,
+      value: 8
     }
   },
 
@@ -23,10 +28,13 @@ Component({
 
   lifetimes: {
     attached() {
-      var movies = require(`../../data/${ this.properties.type }.js`);
-      this.setData({
-        movies: movies.subjects
-      })
+      let {count, type} = this.properties;
+      request[type](res => {
+        let movies = res.data.subject_collection_items;
+        this.setData({
+          movies
+        })
+      }, count);
     }
   },
 

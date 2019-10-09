@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <search-bar></search-bar>
-<movie-show title='影院热映' type='playing'></movie-show>
-<movie-show title='豆瓣热门' type='new'></movie-show>
-<movie-show title='即将上映' type='last'></movie-show>
-<movie-show title='畅销图书' type='books'></movie-show>
+<movie-show title='影院热映' type='movieShowing'></movie-show>
+<movie-show title='豆瓣热门' type='movieHot'></movie-show>
+<movie-show title='即将上映' type='movieSoon'></movie-show>
+<movie-show title='近期热门剧集' type='tvHot'></movie-show>
+<movie-show title='近期热门综艺节目' type='showHot'></movie-show>
+<movie-show title='畅销图书' type='bookHot'></movie-show>
+<movie-show title='热门单曲榜' type='musicHot'></movie-show>

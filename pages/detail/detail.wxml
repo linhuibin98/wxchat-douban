@@ -2,11 +2,13 @@
 
 <view class="header-container">
   <view class="header-left">
-    <image class="header-left-cover" src="{{item.images.small}}"></image>
+  <image wx:if='{{item.type === "book"}}' class="header-left-cover" src="{{item.pic.normal}}"></image>
+    <image wx:else class="header-left-cover" src="{{item.cover.image.small.url}}"></image>
   </view>
   <view class="header-right">
     <h1 class="header-right-title">{{item.title}}</h1>
-    <text class="header-right-detail">剧情 / 中国大陆 / 片长155分钟</text>
+    <text wx:if='{{item.type === "book"}}' class="header-right-detail">{{item.author[0]}} / {{item.press[0]}} / 出版时间: {{item.pubdate[0]}}</text>
+    <text wx:else class="header-right-detail">{{item.genresStr}} / {{item.countries[0]}} / 片长{{item.durations[0]}}</text>
     <view class="header-right-btn-box">
       <button class="header-right-btn">想看</button>
       <button class="header-right-btn">看过</button>

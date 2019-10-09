@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+import request from '../../api/request.js';
 Page({
 
   /**
@@ -12,29 +13,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let id = options.id;
-    let allData = [];
-    let plData = require('../../data/playing.js').subjects;
-    let newData = require('../../data/new.js').subjects;
-    let lastData = require('../../data/last.js').subjects;
-    let booksData = require('../../data/books.js').subjects;
-    allData = allData.concat(plData, newData, lastData, booksData);
-    allData.forEach(item => {
-      if (item.id === id) {
-        this.setData({
-          item
-        });
-        wx.setNavigationBarTitle({ title: item.title});
-        return false;
+    let {id, type} = options;
+    request.itemDetail(res => {
+      let item = res.data;
+      if (item.genres) {
+        item.genresStr = item.genres.join(' ');
       }
-    })
+      this.setData({
+        item
+      })
+      console.log(item)
+    }, type, id)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(this.data.item)
+    
   },
 
   /**
