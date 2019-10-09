@@ -88,7 +88,20 @@ const request = {
         }
       }
     })
-  }
+  },
+  // 搜素内容
+  searchContent(success, val) {
+    wx.request({
+      url: globalUrls.searchUrl(val),
+      success(res) {
+        if (res.statusCode === 200) {
+          success(res);
+        } else if (res.statusCode === 400) {
+          success(res.data.localized_message);
+        }
+      },
+    })
+  },
 }
 
 export default request;

@@ -4,6 +4,6 @@
     <input class="search-ipt" placeholder="搜索" placeholder-style="padding-left: 12rpx;" disabled></input>
   </navigator>
   <view class="search-box" wx:else>
-    <input class="search-ipt" placeholder="搜索" placeholder-style="padding-left: 12rpx;" bind:input="handleContent"></input>
+    <input class="search-ipt" placeholder="搜索" placeholder-style="padding-left: 12rpx;" bind:input="handleContent" auto-focus></input>
   </view>
 </view>

@@ -1,7 +1,7 @@
 <!--pages/list/list.wxml-->
 <view class="list-container">
   <block wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.title'>
-    <navigator class="movie-item" url="/pages/detail/detail?id={{movie.id}}">
+    <navigator class="movie-item" url="/pages/detail/detail?id={{movie.id}}&type={{movie.type}}&title={{movie.title}}">
       <image class="movie-cv" src="{{movie.cover.url}}"></image>
       <text class="movie-name">{{movie.title}}</text>
       <view class="movie-ss">

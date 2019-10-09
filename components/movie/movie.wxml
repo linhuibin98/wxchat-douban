@@ -6,7 +6,7 @@
   </view>
   <scroll-view class="movie-group" scroll-x="true" enable-flex='true'>
     <block wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.title'>
-      <navigator class="movie-item" url="/pages/detail/detail?id={{movie.id}}&type={{movie.type}}">
+      <navigator class="movie-item" url="/pages/detail/detail?id={{movie.id}}&type={{movie.type}}&title={{movie.title}}">
         <image class="movie-cv" src="{{movie.cover.url}}"></image>
         <text class="movie-name">{{movie.title}}</text>
         <view class="movie-ss">

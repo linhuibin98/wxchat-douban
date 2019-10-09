@@ -1,4 +1,8 @@
-var hanldeStar = function(rate) {
+// 处理star个数
+var handleStar = function(rate) {
+  if (!rate) {
+    return ''
+  }
   var starSrc = ['/images/rate_light.png', '/images/rate_half.png', '/images/rate_gray.png'];
   var all = 5; 
   var half = rate / 2;
@@ -16,4 +20,15 @@ var hanldeStar = function(rate) {
   return arr;
 }
 
-module.exports = hanldeStar;
+// 处理rate格式, 保留1位小数
+var handleRate = function(rate) {
+  if (!rate) {
+    return '暂无评分'
+  }
+  return rate.toFixed(1);
+}
+
+module.exports = {
+  handleStar: handleStar,
+  handleRate: handleRate
+};

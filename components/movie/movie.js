@@ -28,6 +28,7 @@ Component({
 
   lifetimes: {
     attached() {
+      // 根据type,获取接口数据
       let {count, type} = this.properties;
       request[type](res => {
         let movies = res.data.subject_collection_items;

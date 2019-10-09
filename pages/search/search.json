@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "search-bar": "/components/search/search",
-    "star": "/components/star/star"
+    "star": "/components/star/star",
+    "my-loading": "/components/loading/loading"
   },
   "navigationBarTitleText": "搜索"
 }

@@ -1,15 +1,18 @@
 <!--pages/search/search.wxml-->
 <search-bar isSearch bind:changeipt='handleVal'></search-bar>
-<view class='list-container'>
+<view wx:if='{{code}}'>{{msg}}</view>
+<my-loading wx:elif='{{loading}}' type="circle" tips="{{tips}}"></my-loading>
+<view wx:elif='{{isEmpty}}'>未找到任何结果</view>
+<view wx:else class='list-container'>
   <block wx:for='{{items}}' wx:key='{{item.title}}'>
-    <navigator class='list-item'>
+    <navigator class='list-item' url="/pages/detail/detail?id={{item.id}}&type={{item.type}}&title={{item.title}}">
       <view class="list-item-left">
-        <image class="list-item-left-img" src="{{item.images.small}}"></image>
+        <image class="list-item-left-img" src="{{item.pic.normal}}"></image>
       </view>
       <view class="list-item-right">
         <h1 class="list-item-right-title">{{item.title}}</h1>
-        <star class='star' rate='{{item.rating.average}}'></star>
-        <view class="list-item-right-detail">{{item.year}} / 中国大陆 / {{item.genresStr}} / {{item.castsStr}}</view>
+        <star class='star' rate='{{item.rating.value}}'></star>
+        <view class="list-item-right-detail">{{item.card_subtitle}}</view>
       </view>
     </navigator>
   </block>

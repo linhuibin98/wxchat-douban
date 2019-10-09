@@ -1,6 +1,6 @@
 <!--components/star/star.wxml-->
-<wxs src='star.wxs' module='handleStar'></wxs>
+<wxs src='star.wxs' module='s'></wxs>
 <view class="star-container">
-  <image wx:for='{{handleStar(rate)}}' wx:key='{{this+index}}' class="ss-star" src="{{item}}"></image>
-  <text class="ss-text">{{rate}}</text>
+  <image wx:for='{{s.handleStar(rate)}}' wx:key='{{this+index}}' class="ss-star" src="{{item}}"></image>
+  <text class="ss-text">{{s.handleRate(rate)}}</text>
 </view>

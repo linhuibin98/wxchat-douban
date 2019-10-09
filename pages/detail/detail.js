@@ -13,7 +13,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let {id, type} = options;
+    let {id, type, title} = options;
+    wx.setNavigationBarTitle({
+      title
+    })
     request.itemDetail(res => {
       let item = res.data;
       if (item.genres) {
@@ -21,7 +24,7 @@ Page({
       }
       this.setData({
         item
-      })
+      });
       console.log(item)
     }, type, id)
   },
