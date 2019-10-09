@@ -1,37 +1,32 @@
-// pages/search/search.js
-import searchContent from 'content';
-
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    allData: [],
-    items: []
-  },
-
-  handleVal(event) {
-    let val = event.detail;
-    let data = this.data.allData
-    let res = searchContent(val, data);
-    this.setData({
-      items: res
-    })
+    item: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let id = options.id;
     let allData = [];
     let plData = require('../../data/playing.js').subjects;
     let newData = require('../../data/new.js').subjects;
     let lastData = require('../../data/last.js').subjects;
     let booksData = require('../../data/books.js').subjects;
     allData = allData.concat(plData, newData, lastData, booksData);
-    this.setData({
-      allData
+    allData.forEach(item => {
+      if (item.id === id) {
+        this.setData({
+          item
+        });
+        wx.setNavigationBarTitle({ title: item.title});
+        return false;
+      }
     })
   },
 
@@ -39,7 +34,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log(this.data.item)
   },
 
   /**

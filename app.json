@@ -4,7 +4,8 @@
     "pages/search/search",
     "pages/bangdan/bangdan",
     "pages/user/user",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

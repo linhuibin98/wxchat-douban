@@ -1,0 +1,51 @@
+/* pages/detail/detail.wxss */
+page {
+  background-color: #f9f6f4;
+}
+.header-container {
+  display: flex;
+  padding: 30rpx;
+}
+
+.header-left {
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.header-left-cover {
+  width: 200rpx;
+  height: 280rpx;
+  background-color: red;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.header-right-title {
+  font-weight: bold;
+}
+
+.header-right-detail {
+  font-size: 24rpx;
+  color: #818181;
+  margin-top: 20rpx;
+}
+
+.header-right-btn-box {
+  display: flex;
+  margin-top: 48rpx;
+}
+
+.header-right-btn {
+  width: 210rpx;
+  height: 70rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.header-right-btn:first-child {
+  margin-right: 16rpx;
+}

@@ -2,5 +2,6 @@
   "usingComponents": {
     "search-bar": "/components/search/search",
     "star": "/components/star/star"
-  }
+  },
+  "navigationBarTitleText": "搜索"
 }

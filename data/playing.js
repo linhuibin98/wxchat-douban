@@ -5,7 +5,7 @@ module.exports = {
   "subjects": [{
     "rating": {
       "max": 10,
-      "average": 8.0,
+      "average": 8.1,
       "details": {
         "1": 192.0,
         "3": 5092.0,
@@ -138,7 +138,7 @@ module.exports = {
   }, {
     "rating": {
       "max": 10,
-      "average": 7.0,
+      "average": 7.1,
       "details": {
         "1": 203.0,
         "3": 5649.0,

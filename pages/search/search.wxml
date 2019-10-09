@@ -7,7 +7,7 @@
         <image class="list-item-left-img" src="{{item.images.small}}"></image>
       </view>
       <view class="list-item-right">
-        <view class="list-item-right-title">{{item.title}}</view>
+        <h1 class="list-item-right-title">{{item.title}}</h1>
         <star class='star' rate='{{item.rating.average}}'></star>
         <view class="list-item-right-detail">{{item.year}} / 中国大陆 / {{item.genresStr}} / {{item.castsStr}}</view>
       </view>

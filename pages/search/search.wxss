@@ -28,7 +28,6 @@
 }
 
 .list-item-right-title {
-  font-size: 35rpx;
   font-weight: bold;
 }
 
