@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     // wx.request({
-    //   url: 'https://m.douban.com/rexxar/api/v2/search?type=movie&q=sdfasdfajksdjahfjshadkjf',
+    //   url: 'https://m.douban.com/rexxar/api/v2/search?type=movie&q=ss&count=10&start=0',
     //   success(res) {
     //     console.log(res)
     //   }

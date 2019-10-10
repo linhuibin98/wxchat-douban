@@ -90,10 +90,11 @@ const request = {
     })
   },
   // 搜素内容
-  searchContent(success, val) {
+  searchContent(success, val, count=10) {
     wx.request({
-      url: globalUrls.searchUrl(val),
+      url: globalUrls.searchUrl(val, count),
       success(res) {
+        console.log(globalUrls.searchUrl(val, count));
         if (res.statusCode === 200) {
           success(res);
         } else if (res.statusCode === 400) {

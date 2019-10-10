@@ -28,8 +28,8 @@ const globalUrls = {
   showComments: function (id, start = 0, count = 3) {
     return this.tvComments(id, start, count);
   },
-  searchUrl: function (q) {
-    return "https://m.douban.com/rexxar/api/v2/search?type=movie&q=" + q
+  searchUrl: function (q, count) {
+    return "https://m.douban.com/rexxar/api/v2/search?type=movie&q=" + q + '&count='+ count;
   }
 }
 

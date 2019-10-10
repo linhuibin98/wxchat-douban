@@ -1,2 +1,7 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="login-container">
+  <button class="login-btn" type="button">登录</button>
+</view>
+<view class="user-collection">
+  <view class='collection-title'>我的书影音</view>
+  <text class="collection-tip">登录查看></text>
+</view>

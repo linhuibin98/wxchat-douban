@@ -1,1 +1,35 @@
 /* pages/user/user.wxss */
+.login-container {
+  align-content: center;
+  height: 420rpx;
+  background-color: #5dc76f;
+}
+
+.login-btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #324a3c;
+  border-radius: 45rpx;
+  font-size: 36rpx;
+}
+
+.user-collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.collection-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.collection-tip {
+  font-size: 24rpx;
+  color: #ccc;
+}
