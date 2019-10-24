@@ -5,14 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    info: {}
   },
 
+  getUserInfo(event) {
+    let info = event.detail.userInfo;
+    if (info) {
+      wx.setStorageSync('userInfo', {
+        ...info,
+        isLogin: true
+      });
+      this.setData({
+        info: {
+          ...info,
+          isLogin: true
+        }
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let info = wx.getStorageSync('userInfo');
+    if (info && info.isLogin) {
+      this.setData({
+        info
+      });
+    }
   },
 
   /**
@@ -26,7 +46,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let self = this;
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.userInfo']) {
+          self.setData({
+            info: {
+              isLogin: false
+            }
+          });
+          wx.setStorageSync('userInfo', {
+            isLogin: false
+          });
+        }
+      }
+    })
   },
 
   /**

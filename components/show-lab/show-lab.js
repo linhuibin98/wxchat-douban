@@ -7,6 +7,10 @@ Component({
     bg: {
       type: String,
       value: 'https://img3.doubanio.com/view/photo/photo/public/p2309770674.jpg'
+    },
+    title: {
+      type: String,
+      value: '2018年度电影榜单'
     }
   },
 

@@ -1,20 +1,40 @@
 /* pages/user/user.wxss */
 .login-container {
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 420rpx;
   background-color: #5dc76f;
+
 }
 
 .login-btn {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   width: 340rpx;
   height: 90rpx;
   line-height: 90rpx;
   color: #324a3c;
   border-radius: 45rpx;
   font-size: 36rpx;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+}
+
+.user-nickname {
+  display: flex;
+  justify-content: center;
+  margin-top: 16rpx;
+  color: #fff;
 }
 
 .user-collection {
@@ -30,6 +50,6 @@
 }
 
 .collection-tip {
-  font-size: 24rpx;
-  color: #ccc;
+  font-size: 30rpx;
+  color: #aaa;
 }

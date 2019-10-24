@@ -2,7 +2,7 @@
 <view class="lab-container" style="background-image: url({{bg}})">
   <view class="lab-bg"></view>
   <view class="lab-ct">
-    <text class="lab-title">2018年度电影榜单</text>
+    <text class="lab-title">{{title}}</text>
     <view class="img-pl">
       <view class="small-bg">
         <view class="lab-img" style="background: url({{small[0]}}) center center / cover no-repeat;"></view>

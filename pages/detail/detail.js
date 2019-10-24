@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isShow: false,
     item: {}
   },
 
@@ -23,9 +24,9 @@ Page({
         item.genresStr = item.genres.join(' ');
       }
       this.setData({
-        item
+        item,
+        isShow: true
       });
-      console.log(item)
     }, type, id)
   },
 

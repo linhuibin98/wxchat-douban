@@ -1,5 +1,5 @@
 <!-- book -->
-<view wx:if='{{item.type === "book"}}' class="header-container">
+<view wx:if='{{item.type === "book" && isShow}}' class="header-container">
   <view class="header-left">
     <image class="header-left-cover" src="{{item.pic.normal}}"></image>
   </view>
@@ -13,7 +13,7 @@
   </view>
 </view>
 <!-- music -->
-<view wx:elif='{{item.type === "music"}}' class="header-container">
+<view wx:if='{{item.type === "music" && isShow}}' class="header-container">
   <view class="header-left">
     <image class="header-left-cover" src="{{item.pic.normal}}"></image>
   </view>
@@ -26,7 +26,7 @@
     </view>
   </view>
 </view>
-<view wx:else class="header-container">
+<view wx:if='{{item.type !== "book" && item.type !== "music" && isShow}}' class="header-container">
   <view class="header-left">
     <image class="header-left-cover" src="{{item.pic.normal}}"></image>
   </view>
